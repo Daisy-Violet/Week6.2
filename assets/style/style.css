@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Gilroy;
+}
+@font-face {
+    font-family: "Gilroy";
+    src: url(../style/fonts/Gilroy-Light.otf);
+    font-weight: 400;
+}
+.wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 15% 60% 25%;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer"
+}
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 40% 35% 25%;
+    grid-template-areas: 
+    "logo info reserve";
+    margin: 25px;
+}
+
+.logo {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info {
+    grid-area: info;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    font-weight: 700;
+    color: rgba(30, 149, 155, 1);
+}
+.reserve {
+    grid-area: reserve;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button {
+    color: white;
+    font-family: "'Gilroy", sans-serif;
+    background-color: rgba(240, 86, 112, 1);
+
+    width: 200px;
+    height: 62px;
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+
+    cursor: pointer;
+}
+.button:hover {
+    background-color: rgb(173, 63, 82);
+}
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: 
+    "box1 box2"
+    "box3 box3"
+    "box4 box4"
+}
+
+.box1 {
+    grid-area: box1;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+    "h1"
+    "text"
+    "b1";
+    justify-content: center;
+    align-items: center;
+    padding: 20%;
+}
+.box2 {
+    grid-area: box2;
+}
+h1 {
+    color: rgba(30, 149, 155, 1);
+    font-weight: 900;
+    font-size: 32px;
+
+    grid-area: h1;
+}
+.text {
+    grid-area: text;
+}
+.button1 {
+    grid-area: b1;
+}
+.box3 {
+    grid-area: box3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 15% repeat(4, 1fr) 15%;
+    grid-template-areas:
+    "h2 h2 h2"
+    "block1 block1 block1"
+    "label1 label1 label1"
+    "block2 block2 block2"
+    "label2 label2 label2"
+    "reserve2 reserve2 reserve2"
+}
+.box4 {
+    grid-area: box4;
+    display: flex;
+    margin: 0 auto;
+}
+.block3 {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10%;
+}
+.date {
+    color: rgba(240, 86, 112, 1);
+    font-weight: 700;
+}
+.text2 {
+    color: rgba(30, 149, 155, 1);
+    font-weight: 900;
+    font-size: 32px;
+}
+h2 {
+    grid-area: h2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: rgba(30, 149, 155, 1);
+    font-weight: 900;
+    font-size: 32px;
+}
+.span {
+    color: rgba(30, 149, 155, 1);
+    font-weight: 700;
+    font-size: 16px;
+
+    text-align: center;
+}
+.block1 {
+    grid-area: block1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.block2 {
+    grid-area: block2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.label1 {
+    grid-area: label1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.label2 {
+    grid-area: label2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.reserve2 {
+    grid-area: reserve2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.description {
+    width: 35%;
+    text-align: center;
+}
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 20% 45% 15% 20%;
+    grid-template-areas: 
+    "footer1 footer2 footer3 footer4";
+    align-items: center;
+}
+.footer1 {
+    grid-area: footer1;
+    display: flex;
+    justify-content: space-around;
+}
+.footer2 {
+    grid-area: footer2;
+    display: flex;
+    justify-content: space-around;
+}
+.footer3 {
+    grid-area: footer3;
+    display: flex;
+    justify-content: space-around;
+}
+.footer4 {
+    grid-area: footer4;
+    display: flex;
+    justify-content: space-around;
+}
+.ft_span {
+    color: rgba(30, 149, 155, 1);
+    font-weight: 700;
+    font-size: 16px;
+}

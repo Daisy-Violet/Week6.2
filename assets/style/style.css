@@ -4,30 +4,110 @@
     box-sizing: border-box;
     font-family: Gilroy;
 }
+img {max-width: 100%;}
 @font-face {
     font-family: "Gilroy";
     src: url(../style/fonts/Gilroy-Light.otf);
     font-weight: 400;
 }
-.wrapper {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 15% 60% 25%;
-    grid-template-areas: 
-    "header header"
-    "main main"
-    "footer footer"
+@media screen and (min-width: 1024px) {
+    header {
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 40% 35% 25%;
+        grid-template-areas: 
+        "logo info reserve";
+        margin: 25px;
+    }
+    main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: 
+        "box1 box2"
+        "box3 box3"
+        "box4 box4"
+    }
+    footer {
+        grid-area: footer;
+        display: grid;
+        grid-template-columns: 20% 45% 15% 20%;
+        grid-template-areas: 
+        "footer1 footer2 footer3 footer4";
+        align-items: center;
+    }
+    .footer1 {
+        grid-area: footer1;
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer2 {
+        grid-area: footer2;
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer3 {
+        grid-area: footer3;
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer4 {
+        grid-area: footer4;
+        display: flex;
+        justify-content: space-around;
+    }
+    .ft_span {
+        color: rgba(30, 149, 155, 1);
+        font-weight: 700;
+        font-size: 16px;
+    }
 }
-header {
-    grid-area: header;
-    display: grid;
-    grid-template-columns: 40% 35% 25%;
-    grid-template-areas: 
-    "logo info reserve";
-    margin: 25px;
+@media screen and (max-width: 767px) {
+   .logo {
+    height: 15vh
+   }
+   .info {
+    height: 15vh
+   }
+   .reserve {
+    height: 15vh
+   }
+h1 {
+    height: 15vh;
 }
-
+.text {
+    height: 15vh;
+}
+.button1 {
+    height: 15vh;
+}
+.box2 {
+        height: 40vh;
+        margin-top: 40px;
+        margin-left: -25px;
+}
+h2 {
+    height: 25vh;
+    text-align: center;
+    margin: 0 auto;
+}
+.block1, .label1, .block2, .label2  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.reserve2 {
+    height: 45vh;
+}
+.box4 {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20%;
+}
+    footer {display: none;}
+}
 .logo {
     grid-area: logo;
     display: flex;
@@ -64,15 +144,6 @@ header {
 }
 .button:hover {
     background-color: rgb(173, 63, 82);
-}
-main {
-    grid-area: main;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-areas: 
-    "box1 box2"
-    "box3 box3"
-    "box4 box4"
 }
 
 .box1 {
@@ -195,37 +266,4 @@ h2 {
 .description {
     width: 35%;
     text-align: center;
-}
-footer {
-    grid-area: footer;
-    display: grid;
-    grid-template-columns: 20% 45% 15% 20%;
-    grid-template-areas: 
-    "footer1 footer2 footer3 footer4";
-    align-items: center;
-}
-.footer1 {
-    grid-area: footer1;
-    display: flex;
-    justify-content: space-around;
-}
-.footer2 {
-    grid-area: footer2;
-    display: flex;
-    justify-content: space-around;
-}
-.footer3 {
-    grid-area: footer3;
-    display: flex;
-    justify-content: space-around;
-}
-.footer4 {
-    grid-area: footer4;
-    display: flex;
-    justify-content: space-around;
-}
-.ft_span {
-    color: rgba(30, 149, 155, 1);
-    font-weight: 700;
-    font-size: 16px;
 }
